@@ -8,6 +8,9 @@ package main
 import (
 	"fmt"
 	"time"
+	"io"
+	"log"
+	"net/http"
 )
 
 const (
@@ -26,7 +29,41 @@ func needFloat(x float64) float64 {
 	return x * 0.1
 }
 
+func Get(url string) (resp *Response, err error)
+
+func Head(url string) (resp *Response, err error)
+
 func main() {
+
+
+	// Create a simple Go client Application that retrieves some data from an external service and parse them: 
+	// using Google Map API retrieve the 20 best restaurants around the given coordinate
+	resp, err :- http.Get("https://maps.googleapis.com/maps/api/js?key=AIzaSyDZxEKhXaedBzs4XPxE5UleZ3-rNrmaMHs&libraries=places&callback=initMap")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	/*
 	fmt.Println("Hello")
 	fmt.Println(time.Now())
 
@@ -43,4 +80,8 @@ func main() {
 	fmt.Println(needInt(Small))
 	fmt.Println(needFloat(Small))
 	fmt.Println(needFloat(Big))
+	*/
+
+	
+
 }
